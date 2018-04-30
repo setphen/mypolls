@@ -1,0 +1,7 @@
+<h4>This is the poll question:</h4>
+<p>
+  <%= @poll.prompt %>
+</p>
+<%= for option <- @poll.options do %>
+  <%= submit option.text %>
+<% end %>
