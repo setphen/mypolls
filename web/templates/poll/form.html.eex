@@ -1,0 +1,17 @@
+<%= form_for @changeset, poll_path(@conn, :create), fn f -> %>
+  <div class="form-group">
+    <label>
+      Prompt: <%= text_input f, :prompt %>
+    </label>
+  </div>
+
+  <%= inputs_for f, :options, fn p -> %>
+    <div class="form-group">
+      <label>
+        Option: <%= text_input p, :text %>
+      </label>
+    </div>
+  <% end %>
+
+  <%= submit "Submit" %>
+<% end %>

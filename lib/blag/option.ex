@@ -10,4 +10,9 @@ defmodule Blag.Option do
     timestamps()
   end
 
+  def changeset(struct, params \\ %{}) do
+    struct
+    |> cast(params, [:text])
+  end
+
 end

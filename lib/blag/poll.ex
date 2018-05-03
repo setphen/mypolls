@@ -5,8 +5,14 @@ defmodule Blag.Poll do
 
   schema "polls" do
     field :prompt, :string
-    has_many :options, Blag.Option
+    has_many :options, Blag.Option, on_delete: :delete_all
     timestamps()
+  end
+
+  def changeset(struct, params \\ %{}) do
+    struct
+    |> cast(params, [:prompt])
+    |> cast_assoc(:options, required: true)
   end
 
 end
