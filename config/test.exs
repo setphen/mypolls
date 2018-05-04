@@ -2,7 +2,7 @@ use Mix.Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :blag, Blag.Endpoint,
+config :mypolls, MyPolls.Endpoint,
   http: [port: 4001],
   server: false
 
@@ -10,7 +10,7 @@ config :blag, Blag.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-config :blag, Blag.Repo,
+config :mypolls, MyPolls.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",

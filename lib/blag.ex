@@ -1,4 +1,4 @@
-defmodule Blag do
+defmodule MyPolls do
   use Application
 
   # See https://hexdocs.pm/elixir/Application.html
@@ -9,23 +9,23 @@ defmodule Blag do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(Blag.Repo, []),
+      supervisor(MyPolls.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(Blag.Endpoint, []),
-      # Start your own worker by calling: Blag.Worker.start_link(arg1, arg2, arg3)
-      # worker(Blag.Worker, [arg1, arg2, arg3]),
+      supervisor(MyPolls.Endpoint, []),
+      # Start your own worker by calling: MyPolls.Worker.start_link(arg1, arg2, arg3)
+      # worker(MyPolls.Worker, [arg1, arg2, arg3]),
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Blag.Supervisor]
+    opts = [strategy: :one_for_one, name: MyPolls.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    Blag.Endpoint.config_change(changed, removed)
+    MyPolls.Endpoint.config_change(changed, removed)
     :ok
   end
 end

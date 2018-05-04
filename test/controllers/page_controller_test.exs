@@ -1,5 +1,5 @@
-defmodule Blag.PageControllerTest do
-  use Blag.ConnCase
+defmodule MyPolls.PageControllerTest do
+  use MyPolls.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

@@ -1,5 +1,5 @@
-defmodule Blag.ErrorView do
-  use Blag.Web, :view
+defmodule MyPolls.ErrorView do
+  use MyPolls.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

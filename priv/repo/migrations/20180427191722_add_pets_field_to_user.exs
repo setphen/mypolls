@@ -1,4 +1,4 @@
-defmodule Blag.Repo.Migrations.AddPetsFieldToUser do
+defmodule MyPolls.Repo.Migrations.AddPetsFieldToUser do
   use Ecto.Migration
 
   def change do

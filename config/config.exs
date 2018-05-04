@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :blag,
-  ecto_repos: [Blag.Repo]
+config :mypolls,
+  ecto_repos: [MyPolls.Repo]
 
 # Configures the endpoint
-config :blag, Blag.Endpoint,
+config :mypolls, MyPolls.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "9fokSiB8ocCwoAiNZVAAx/g+y+bFK3MleTn1TUf6pP4xEMfKE4DCtkdX5PQX4qnO",
-  render_errors: [view: Blag.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Blag.PubSub,
+  render_errors: [view: MyPolls.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: MyPolls.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

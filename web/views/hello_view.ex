@@ -1,3 +1,3 @@
-defmodule Blag.HelloView do
-  use Blag.Web, :view
+defmodule MyPolls.HelloView do
+  use MyPolls.Web, :view
 end

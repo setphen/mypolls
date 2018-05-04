@@ -1,7 +1,7 @@
-defmodule Blag.PollController do
-  use Blag.Web, :controller
-  alias Blag.{Poll, Option, Vote}
-  alias Blag.Repo
+defmodule MyPolls.PollController do
+  use MyPolls.Web, :controller
+  alias MyPolls.{Poll, Option, Vote}
+  alias MyPolls.Repo
 
   def index(conn, _params) do
     conn

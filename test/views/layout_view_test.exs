@@ -1,3 +1,3 @@
-defmodule Blag.LayoutViewTest do
-  use Blag.ConnCase, async: true
+defmodule MyPolls.LayoutViewTest do
+  use MyPolls.ConnCase, async: true
 end

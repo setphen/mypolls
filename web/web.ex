@@ -1,12 +1,12 @@
-defmodule Blag.Web do
+defmodule MyPolls.Web do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use Blag.Web, :controller
-      use Blag.Web, :view
+      use MyPolls.Web, :controller
+      use MyPolls.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -31,12 +31,12 @@ defmodule Blag.Web do
     quote do
       use Phoenix.Controller
 
-      alias Blag.Repo
+      alias MyPolls.Repo
       import Ecto
       import Ecto.Query
 
-      import Blag.Router.Helpers
-      import Blag.Gettext
+      import MyPolls.Router.Helpers
+      import MyPolls.Gettext
     end
   end
 
@@ -50,9 +50,9 @@ defmodule Blag.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import Blag.Router.Helpers
-      import Blag.ErrorHelpers
-      import Blag.Gettext
+      import MyPolls.Router.Helpers
+      import MyPolls.ErrorHelpers
+      import MyPolls.Gettext
     end
   end
 
@@ -66,10 +66,10 @@ defmodule Blag.Web do
     quote do
       use Phoenix.Channel
 
-      alias Blag.Repo
+      alias MyPolls.Repo
       import Ecto
       import Ecto.Query
-      import Blag.Gettext
+      import MyPolls.Gettext
     end
   end
 

@@ -1,3 +1,3 @@
-defmodule Blag.PageView do
-  use Blag.Web, :view
+defmodule MyPolls.PageView do
+  use MyPolls.Web, :view
 end

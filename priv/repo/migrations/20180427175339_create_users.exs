@@ -1,4 +1,4 @@
-defmodule Blag.Repo.Migrations.CreateUsers do
+defmodule MyPolls.Repo.Migrations.CreateUsers do
   use Ecto.Migration
 
   def change do

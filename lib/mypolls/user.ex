@@ -1,4 +1,4 @@
-defmodule Blag.User do
+defmodule MyPolls.User do
   use Ecto.Schema
   import Ecto.Changeset
 

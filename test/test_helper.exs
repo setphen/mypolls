@@ -1,4 +1,4 @@
 ExUnit.start
 
-Ecto.Adapters.SQL.Sandbox.mode(Blag.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(MyPolls.Repo, :manual)
 

@@ -1,5 +1,5 @@
-defmodule Blag.Router do
-  use Blag.Web, :router
+defmodule MyPolls.Router do
+  use MyPolls.Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,7 +13,7 @@ defmodule Blag.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", Blag do
+  scope "/", MyPolls do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
@@ -24,7 +24,7 @@ defmodule Blag.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", Blag do
+  # scope "/api", MyPolls do
   #   pipe_through :api
   # end
 end

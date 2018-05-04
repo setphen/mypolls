@@ -1,5 +1,5 @@
-defmodule Blag.HelloController do
-  use Blag.Web, :controller
+defmodule MyPolls.HelloController do
+  use MyPolls.Web, :controller
 
   def index(conn, _params) do
     conn

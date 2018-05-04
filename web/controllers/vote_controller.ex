@@ -1,7 +1,7 @@
-defmodule Blag.VoteController do
-  use Blag.Web, :controller
-  alias Blag.{Poll, Option, Vote}
-  alias Blag.Repo
+defmodule MyPolls.VoteController do
+  use MyPolls.Web, :controller
+  alias MyPolls.{Poll, Option, Vote}
+  alias MyPolls.Repo
 
 
   def create(conn, %{"option_id" => option_id, "poll_id" => poll_id} = params) do

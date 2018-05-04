@@ -1,4 +1,4 @@
-defmodule Blag.ConnCase do
+defmodule MyPolls.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -20,23 +20,23 @@ defmodule Blag.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      alias Blag.Repo
+      alias MyPolls.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
-      import Blag.Router.Helpers
+      import MyPolls.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint Blag.Endpoint
+      @endpoint MyPolls.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Blag.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(MyPolls.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Blag.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(MyPolls.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

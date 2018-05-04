@@ -19,7 +19,7 @@ use Mix.Config
 # If desired, both `http:` and `https:` keys can be
 # configured to run both http and https servers on
 # different ports.
-config :blag, Blag.Endpoint,
+config :mypolls, MyPolls.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -29,7 +29,7 @@ config :blag, Blag.Endpoint,
 
 
 # Watch static and templates for browser reloading.
-config :blag, Blag.Endpoint,
+config :mypolls, MyPolls.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
@@ -47,7 +47,7 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
-config :blag, Blag.Repo,
+config :mypolls, MyPolls.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: System.get_env("POSTGRES_USER") || "postgres",
   password: "",

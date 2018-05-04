@@ -1,11 +1,11 @@
-defmodule Blag.Poll do
+defmodule MyPolls.Poll do
   use Ecto.Schema
   import Ecto.Changeset
 
 
   schema "polls" do
     field :prompt, :string
-    has_many :options, Blag.Option, on_delete: :delete_all
+    has_many :options, MyPolls.Option, on_delete: :delete_all
     timestamps()
   end
 

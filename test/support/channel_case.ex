@@ -1,4 +1,4 @@
-defmodule Blag.ChannelCase do
+defmodule MyPolls.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -20,22 +20,22 @@ defmodule Blag.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-      alias Blag.Repo
+      alias MyPolls.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
 
       # The default endpoint for testing
-      @endpoint Blag.Endpoint
+      @endpoint MyPolls.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Blag.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(MyPolls.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Blag.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(MyPolls.Repo, {:shared, self()})
     end
 
     :ok

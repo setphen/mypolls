@@ -1,10 +1,10 @@
-defmodule Blag.Vote do
+defmodule MyPolls.Vote do
   use Ecto.Schema
   import Ecto.Changeset
 
 
   schema "votes" do
-    belongs_to :option, Blag.Option
+    belongs_to :option, MyPolls.Option
     timestamps()
   end
 
