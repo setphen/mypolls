@@ -5,13 +5,17 @@
     </label>
   </div>
 
-  <%= inputs_for f, :options, fn p -> %>
     <div class="form-group">
       <label>
-        Option: <%= text_input p, :text %>
+        Option: <%= text_input f, :text, name: "poll[options][][text]" %>
+      </label>
+      <label>
+        Option: <%= text_input f, :text, name: "poll[options][][text]" %>
+      </label>
+      <label>
+        Option: <%= text_input f, :text, name: "poll[options][][text]" %>
       </label>
     </div>
-  <% end %>
 
   <%= submit "Submit" %>
 <% end %>

@@ -8,4 +8,11 @@ defmodule Blag.Vote do
     timestamps()
   end
 
+  def changeset(struct, params \\ %{}) do
+    IO.inspect params
+    struct
+    |> cast(params, [:option_id])
+    |> cast_assoc(:option)
+  end
+
 end

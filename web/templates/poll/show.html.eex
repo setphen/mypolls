@@ -1,13 +1,11 @@
-<h4>The question of the poll is…</h4>
-<p>
-  <%= @poll.prompt %>
-</p>
+<p>The question of the poll is…</p>
+<h4> <%= @poll.prompt %> </h4>
+<hr>
 <%= for option <- @poll.options do %>
-  <div>
     <%= button(
-      "#{option.text} : #{length(option.votes)}",
-      to: poll_path(@conn, :show, @poll, option: option),
-      method: :put
-      ) %>
-  </div>
+      "#{option.text} (#{length(option.votes)} votes)",
+      to: vote_path(@conn, :create, option_id: option, poll_id: @poll.id),
+      method: :post,
+      class: "vote-button"
+    ) %>
 <% end %>

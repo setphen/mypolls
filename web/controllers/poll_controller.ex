@@ -15,6 +15,7 @@ defmodule Blag.PollController do
 
   def create(conn, %{"poll" => poll_params}) do
 
+    IO.inspect poll_params
     poll_changeset = Poll.changeset(%Poll{}, poll_params)
 
     if poll_changeset.valid? do
@@ -37,16 +38,5 @@ defmodule Blag.PollController do
     conn
     |> assign(:poll, poll)
     |> render "show.html"
-  end
-
-  def update(conn, %{"id" => id, "option" => option_id}) do
-    option = Repo.get(Option, option_id)
-
-    # Insert a vote
-    Repo.insert(%Vote{option: option})
-
-    conn
-    |> put_flash(:info, "Successfully submitted your vote")
-    |> redirect(to: poll_path(conn, :show, id))
   end
 end

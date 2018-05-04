@@ -20,6 +20,7 @@ defmodule Blag.Router do
     get "/hello", HelloController, :index
     get "/hello/:messenger", HelloController, :show
     resources "/poll", PollController, except: [:delete]
+    resources "/vote", VoteController, only: [:create]
   end
 
   # Other scopes may use custom stacks.
